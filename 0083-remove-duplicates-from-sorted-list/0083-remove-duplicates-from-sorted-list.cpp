@@ -5,7 +5,9 @@ public:
     ListNode* current=head;
     while(current&&current->next){
         if(current->val==current->next->val){
-            current->next=current->next->next;
+            ListNode* dummy=current->next;
+            current->next=dummy->next;
+            delete dummy;
         }
         else
         current=current->next;
