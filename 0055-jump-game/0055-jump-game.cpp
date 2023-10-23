@@ -1,7 +1,7 @@
 class Solution {
 public:
     bool generate(vector<int>& nums, int n, int curr, vector<int>& dp) {
-        if (curr == n - 1) {
+        if (curr >= n - 1) {
             return true; // Reached the end successfully.
         }
         if (!nums[curr]) {
