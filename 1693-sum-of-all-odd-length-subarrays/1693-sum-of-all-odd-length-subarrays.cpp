@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int sumofk(vector<int>nums,int k){
+    int sumofk(vector<int>&nums,int k){
         int start=0,end=0,n=nums.size(),sum=0,ans=0;
         while(end<n){
             sum+=nums[end];
