@@ -8,9 +8,9 @@ public:
         if (dp[ind][buy] != -1) return dp[ind][buy];
         
         if (buy) {
-            dp[ind][buy] = max(-v[ind] + find(ind + 1, v, false)-k, find(ind + 1, v, buy));
+            dp[ind][buy] = max(-v[ind] + find(ind + 1, v, false), find(ind + 1, v, buy));
         } else {
-            dp[ind][buy] = max(v[ind] + find(ind + 1, v, true), find(ind + 1, v, buy));
+            dp[ind][buy] = max(v[ind] + find(ind + 1, v, true)-k, find(ind + 1, v, buy));
         }
         
         return dp[ind][buy];
