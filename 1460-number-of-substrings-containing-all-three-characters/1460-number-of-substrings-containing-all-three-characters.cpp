@@ -2,10 +2,8 @@ class Solution {
 public:
     int numberOfSubstrings(string s)
     {
-        int l=0,r=0,end=s.length()-1;
-        int n=s.length();
+        int l=0,r=0,end=s.length()-1,n=s.length(),count=0;
         unordered_map<char,int>map;
-        int count=0;
         while(r<n)
         {
             map[s[r]]++;
