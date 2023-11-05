@@ -1,6 +1,6 @@
 class Solution {
 public:
-    int partitionString(string nums) {
+    int partitionString(string &nums) {
         unordered_map<char,int>mp;
         int start=0,end=0,n=nums.size(),cnt=0;
         while(end<n){
@@ -11,7 +11,6 @@ public:
             }
             end++;
         }
-        cout<<end<<" "<<start<<" "<<cnt;
         return cnt+1;
     }
 };
